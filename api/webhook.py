@@ -2,9 +2,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/webhook', methods=['POST'])
+@app.route('/api/webhook', methods=['GET'])
 def webhook():
-    if request.method == 'POST':
+    if request.method == 'GET':
         # Bibliothèques populaires de Python avec descriptions en français
         libraries = {
             "Pandas": "Pandas est une bibliothèque open-source rapide, puissante, flexible et facile à utiliser pour l'analyse et la manipulation de données, construite sur le langage de programmation Python.",
